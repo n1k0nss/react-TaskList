@@ -1,10 +1,7 @@
 import React, {useState} from "react";
 import '../src/styles/App.scss';
 import TaskList from "./components/TaskList";
-import MyButton from "./components/ui/MyButton";
-import MyInput from "./components/ui/MyInput";
 import TaskForm from "./components/TaskForm";
-import taskForm from "./components/TaskForm";
 
 function App() {
         const [tasks, setTasks] = useState([
@@ -25,7 +22,11 @@ function App() {
   return (
     <div className="app container">
         <TaskForm tasks={tasks} create={createTask}/>
-        <TaskList tasks={tasks} title='Tasks' remove={removeTask}/>
+        {tasks.length !== 0
+        ? <TaskList tasks={tasks} title='Tasks' remove={removeTask}/>
+        : <span className={'app__not-found'}>Tasks not found!</span>
+        }
+
     </div>
   );
 }

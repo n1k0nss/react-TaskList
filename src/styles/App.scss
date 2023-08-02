@@ -23,6 +23,15 @@ body{
     text-transform: uppercase;
     margin-bottom: 40px;
   }
+  &__not-found{
+    display: block;
+    white-space: nowrap;
+    margin-top: 50px;
+    color: red;
+    font-size: 45px;
+    font-style: italic;
+    text-align: center;
+  }
 }
 
 .task{
