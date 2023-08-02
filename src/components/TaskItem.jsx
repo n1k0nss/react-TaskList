@@ -1,4 +1,5 @@
 import React from 'react';
+import MyButton from "./ui/MyButton";
 
 const taskItem = (props) => {
     return (
@@ -8,7 +9,7 @@ const taskItem = (props) => {
                 <span className="task__user">User {props.task.userId}</span>
                 <p className="task__text">{props.task.title}</p>
             </div>
-            <button className="task__delete">Delete</button>
+            <MyButton onClick={() => props.remove(props.task)} className="task__delete">Delete</MyButton>
             <span className={
                 'task__status ' +
                 (props.task.completed ? 'task__status--complete' : 'task__status--uncomplete')
