@@ -1,0 +1,29 @@
+.btn-default{
+  width: 150px;
+  padding: 10px;
+  font-size: 20px;
+  border: 2px solid teal;
+  color: teal;
+  border-radius: 10px;
+}
+
+.input-default{
+  width: 400px;
+  height: 45px;
+  padding: 0 15px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 300;
+  border: 1px solid teal;
+  transition-duration: .25s;
+  &::placeholder {
+    color: #999999;
+  }
+  &:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+  &:focus {
+    border-color: teal;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  }
+}

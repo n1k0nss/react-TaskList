@@ -1,0 +1,84 @@
+@import "mixins/mixins";
+@import "base/reset";
+@import "base/layouts";
+
+@import "components/taskForm";
+
+@import "ui/ui";
+
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.app{
+  padding: 40px;
+  &__title{
+    font-size: 46px;
+    line-height: 1.2;
+    color: #99e353;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+}
+
+.task{
+  padding: 20px;
+  margin-bottom: 40px;
+  border: 5px dotted #00ffc4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__box{
+    width: 60%;
+  }
+  &__title{
+    font-size: 32px;
+    color: #8d8d8d;
+  }
+  &__user{
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: #ab0da5;
+    font-family: Handjet, cursive;
+    margin: 20px 0;
+  }
+  &__text{
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  &__delete{
+    color: #fff;
+    background-color: #ff7400;
+    border: 2px solid #ff7400;
+    padding: 10px;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition-duration: .3s;
+    &:hover{
+      background-color: #fff;
+      color: #ff7400;
+    }
+  }
+  &__status{
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: Handjet, cursive;
+    &--complete{
+      color: #3d7c00;
+    }
+    &--uncomplete{
+      color: #ff0000;
+    }
+  }
+}
+
+
+
